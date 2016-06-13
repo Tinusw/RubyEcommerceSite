@@ -4,19 +4,8 @@
       <h1>Products</h1>
     </div>
     <% @products.each do |product| %>
-      <div class='col-lg-2 container-image products'>
-        <%= image_tag(product.image_url, class: "img-responsive") %>
-          <div class="container text-center">
-            <h5> <%= product.name %> </h5>
-            <h5><strong>$ <%= product.price %> </strong></h5>
-          </div>
-          <div class="products_options text-center">
-            <span><%= link_to 'Show', product %></span> |
-            <span><%= link_to 'Edit', edit_product_path(product) %></span> |
-            <span><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-          </div>
-      </div>
-      <% end %>
+      <%= render product %>
+    <% end %>
     </div>
     <div class="container text-center">
       <button class="btn btn-success">

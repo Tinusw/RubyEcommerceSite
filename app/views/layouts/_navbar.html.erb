@@ -1,0 +1,10 @@
+<div class="header">
+  <ul class="nav nav-pills pull-left">
+    <li class="<%= active_if_current(root_path)%>">
+      <%= link_to "Home", root_path %>
+    </li>
+    <li class="<%= active_if_current(products_path)%>">
+      <%= link_to "Products", products_path %>
+    </li>
+  </ul>
+</div>

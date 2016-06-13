@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
   def index
-    @featured_product = Product.first
+    @products = Product.first(3)
   end
 end
