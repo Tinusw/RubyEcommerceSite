@@ -3,11 +3,15 @@ $secondary-color: #a6172d;
 $tertiary-color: #c72e45;
 $background-color: #d3e0f7;
 
+.container {
+  width: 100%;
+}
+
 .product {
-  width: 30%;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
+  width: 19%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  margin-bottom: 1%;
   border-radius: 5px;
   background-color: $tertiary-color;
 }

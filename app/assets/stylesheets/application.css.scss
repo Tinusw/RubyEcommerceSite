@@ -22,7 +22,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+html {
+  background: $background-color;  
+}
+
 body {
+  width: 100%;
   background: $background-color;
   font-weight: 200;
 }
