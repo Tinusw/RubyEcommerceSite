@@ -1,0 +1,13 @@
+$primary-color: #181842;
+$secondary-color: #a6172d;
+$tertiary-color: #c72e45;
+$background-color: #d3e0f7;
+
+.product {
+  width: 30%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: $tertiary-color;
+}
