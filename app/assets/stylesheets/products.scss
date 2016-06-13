@@ -1,5 +1,5 @@
 $primary-color: #181842;
-$secondary-color: #a6172d;
+$secondary-color: rgba(175, 238, 238, 0.3);
 $tertiary-color: #c72e45;
 $background-color: #d3e0f7;
 
@@ -8,10 +8,20 @@ $background-color: #d3e0f7;
 }
 
 .product {
-  width: 19%;
-  margin-left: 0.5%;
-  margin-right: 0.5%;
-  margin-bottom: 1%;
-  border-radius: 5px;
   background-color: $tertiary-color;
+}
+
+.products {
+  padding-top: 0.5%;
+  border-radius: 30px;
+  background-color: $secondary-color;
+}
+
+.container-image {
+  margin: 0 auto;
+  margin-top: 1%;
+}
+
+.img-responsive {
+  border-radius: 30px;
 }

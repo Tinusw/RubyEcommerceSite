@@ -15,7 +15,7 @@
  */
 
  $primary-color: #181842;
- $secondary-color: #a6172d;
+$secondary-color: rgba(175, 238, 238, 0.3);
  $tertiary-color: #c72e45;
  $background-color: #d3e0f7;
 
@@ -34,6 +34,11 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
+}
+
+.center {
+  margin: 0 auto;
+  float: none;
 }
 
 @import 'products.scss'
