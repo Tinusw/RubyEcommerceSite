@@ -9,12 +9,14 @@ $background-color: rgba(211, 224, 247, 0.7);
 
 html {
   background: $background-color;  
+  margin: 0;
+  height: 100%;
 }
 
 body {
   width: 100%;
-  background: $background-color;
   font-weight: 200;
+  background: $background-color
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -23,7 +25,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav {
   position: fixed;
+  top: 0;
   z-index: 1;
+  margin-top: 0;
   width: 100%;
   background-color: rgba(211, 224, 247, 0.7);
   font-size: 19px;
@@ -35,6 +39,10 @@ h1, h2, h3, h4, h5, h6 {
 .center {
   margin: 0 auto;
   float: none;
+}
+
+.header-spacing {
+  margin-top: 50px;
 }
 
 @import 'products.scss'

@@ -1,31 +1,25 @@
-<p id="notice"><%= notice %></p>
-<div class="col-md-6 center text-center product">
-  <p>
+<div class="col-md-6 center text-center">
+  <div class="header-spacing">
     <%= image_tag(@product.image_url, class:" img-responsive center") %>
-  </p>
+  </div>
 
-  <p>
-    <strong>Name:</strong>
+  <h2>
     <%= @product.name %>
-  </p>
+  </h2>
 
-  <p>
-    <strong>Desc:</strong>
+  <h4>
     <%= @product.desc %>
-  </p>
+  </h4>
 
-  <p>
-    <strong>Style: </strong>
+  <h4>
     <%= @product.style %>
-  </p>
+  </h4>
 
-  <p>
-    <strong>Price: $</strong>
-    <%= @product.price %>
-  </p>
+  <h4>
+    <strong>$<%= @product.price %></strong>
+  </h4>
 
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
-
 </div>

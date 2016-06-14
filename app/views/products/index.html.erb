@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <p id="notice"><%= notice %></p>
-    <div class="header-text text-center">
+    <div class="header-spacing text-center">
       <h1>Products</h1>
     </div>
     <% @products.each do |product| %>
@@ -8,8 +8,7 @@
     <% end %>
     </div>
     <div class="container text-center">
-      <button class="btn btn-success">
-        <%= link_to 'New Product', new_product_path %>
+        <%= link_to 'New Product', new_product_path, class: "btn btn-success" %>
     </div> 
   </div>
 </div>

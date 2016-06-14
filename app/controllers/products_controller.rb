@@ -7,6 +7,10 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.where("name LIKE ?", "%#{search_term}")
+      # if no matches are returned, return all.
+      if @products.empty?
+        @products = Product.all
+      end
       # return filtered search list
     else
       @products = Product.all
