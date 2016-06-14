@@ -1,10 +1,18 @@
 <div class="header">
-  <ul class="nav nav-pills pull-left">
+  <ul class="nav navbar-form nav-pills pull-left">
     <li class="<%= active_if_current(root_path)%>" >
       <%= link_to "Home", root_path %>
     </li>
     <li class="<%= active_if_current(products_path)%>">
       <%= link_to "Products", products_path %>
+    </li>
+    <li class="input-group">
+    <%= form_tag("/products", method: "get") do %>
+      <%= text_field_tag(:q, nil, placeholder: "Find a product:", class: "form-control input-lg") %>
+      <div class="span input-group-btn">
+        <%= submit_tag("Search", class: "btn btn-success btn-lg") %>
+      </div>
+    <% end %>
     </li>
   </ul>
 </div>
