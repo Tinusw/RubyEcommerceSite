@@ -1,5 +1,5 @@
 <div class="jumbotron text-center header">
-  <h1>THE BOOT SHOP #IndexPage</h1>
+  <h1>THE BOOT SHOP</h1>
   <p>Find me in app/views/static_pages/index.html.erb</p>
   <div class="container">
     <p>
@@ -25,7 +25,7 @@
       <div class="item<%= " active" if product == @products.first %>">
         <%= image_tag(product.image_url, class: "img-responsive center") %>
         <div class="carousel-caption">
-          <%= product.name %>
+          <%= link_to "Buy", product, class: "btn btn-success" %>
         </div>
       </div>
       <% end %>

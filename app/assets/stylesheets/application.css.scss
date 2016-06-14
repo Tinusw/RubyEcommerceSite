@@ -1,7 +1,8 @@
-$primary-color: #181842;
+$primary-color: rgba(24, 24, 66, 1.0);
 $secondary-color: rgba(175, 238, 238, 0.3);
-$tertiary-color: #c72e45;
-$background-color: #d3e0f7;
+$tertiary-color: rgba(199, 46, 69, 1.0);
+$background-layer1: rgba(211, 224, 247, 1.0);
+$background-color: rgba(211, 224, 247, 0.7);
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -22,7 +23,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav {
   position: fixed;
-  z-index: 1
+  z-index: 1;
+  width: 100%;
+  background-color: rgba(211, 224, 247, 0.7);
+  font-size: 16px;
+    a {
+      color: black;
+    }
 }
 
 .center {
