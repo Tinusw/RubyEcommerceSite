@@ -12,5 +12,10 @@
       <%= submit_tag("Search", class: "btn btn-success btn-lg") %>
     </div>
   <% end %>
+  <li class="pull-right <%= active_if_current(static_pages_about_path)%>">
+    <%= link_to "About", static_pages_about_path %>
+  </li>
+  <li class="pull-right <%= active_if_current(static_pages_contact_path)%>">
+    <%= link_to "Contact", static_pages_contact_path %>
   </li>
 </ul>
