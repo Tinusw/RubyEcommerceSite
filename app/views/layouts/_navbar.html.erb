@@ -12,6 +12,18 @@
       <%= submit_tag("Search", class: "btn btn-success btn-lg") %>
     </div>
   <% end %>
+  <% if user_signed_in? %>
+  <li class="pull-right">
+    <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+  </li>
+  <li class="pull-right <%= active_if_current(edit_user_registration_path)%>">
+    <%= link_to "Account", edit_user_registration_path %>
+  </li>
+  <% else %>
+  <li class="pull-right">
+    <%= link_to('Login', new_user_session_path) %>
+  </li>
+  <% end %>
   <li class="pull-right <%= active_if_current(static_pages_about_path)%>">
     <%= link_to "About", static_pages_about_path %>
   </li>
