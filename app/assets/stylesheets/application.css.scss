@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
   margin-top: 0;
   width: 100%;
-  background-color: rgba(211, 224, 247, 0.7);
+  background-color: rgba(211, 224, 247, 0.2);
   font-size: 19px;
     a {
       color: black;
@@ -51,4 +51,5 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-@import 'products.scss'
+@import 'products.scss';
+@import 'comments.scss';

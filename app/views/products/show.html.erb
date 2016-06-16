@@ -24,8 +24,8 @@
       <strong>$<%= @product.price %></strong>
     </h4>
   </div>
-  <%= render 'products/new_comment' %>
-  <%= render 'products/comments' %>
+  <%= render 'comments/new_comment' %>
+  <%= render 'comments/comments' %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
