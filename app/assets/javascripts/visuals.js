@@ -1,4 +1,4 @@
-$(document).on('ready page:load', function(){
+$(document).on('ready', function(){
   // scroll Reveal
   window.sr = ScrollReveal();
   sr.reveal('.products', { duration: 2000 }, 80);
