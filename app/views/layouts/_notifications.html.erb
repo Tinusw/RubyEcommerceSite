@@ -1,4 +1,11 @@
-<div class="container alert-notices">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-</div>
+<% if notice %>
+  <div class="container alert-notices">
+    <p class="notice"><%= notice %></p>
+  </div>
+<% end %>
+
+<% if alert %>
+  <div class="container alert-notices">
+    <p class="alert"><%= alert %></p>
+  </div>
+<% end %>
