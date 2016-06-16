@@ -1,0 +1,17 @@
+<% if user_signed_in? %>
+<div class='col-lg-2 container-image products'>
+  <div class="container text-center">
+      <h4> Add a review: </h4>
+  </div>
+  <div class="container text-center">
+    <p>
+      <%= f.text_area :body, placeholder: "Thoughts?" %>
+    </p>
+    <p>
+      <%= f.text_field :rating, placeholder: "Rating? (Out of 5)" %>
+    </p>
+    <div class="container text-center">
+      <%= f.submit "Submit", class: "btn btn-secondary" %>
+    </div>
+  </div>
+</div>
