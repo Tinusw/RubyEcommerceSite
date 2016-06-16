@@ -1,5 +1,5 @@
 <div class="container product-reviews">
-  <%= @comment.each do |comment| %>
+  <% @comments.each do |comment| %>
     <div class="row">
       <hr>
       <p>
@@ -9,7 +9,7 @@
         <%= "#{time_ago_in_words(comment.created_at)} ago" %>
       </small></p>
       <p>
-        <%= "Rating: #{comment.rating}/5" %> 
+        <div class="rated" data-score="<%=comment.rating%>"></div>
       </p>
       <p>
         <%= comment.body %>
