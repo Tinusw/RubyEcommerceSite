@@ -13,6 +13,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'devise', '~> 4.1', '>= 4.1.1'
 gem 'cancancan', '~> 1.14'
 gem 'jquery-turbolinks'
+gem 'will_paginate', '~> 3.1.0'
 
 group :production do 
   gem 'rails_12factor'
