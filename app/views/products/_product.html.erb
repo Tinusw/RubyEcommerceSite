@@ -5,8 +5,10 @@
       <h5><strong>$ <%= product.price %> </strong></h5>
     </div>
     <div class="products_options text-center">
-      <span><%= link_to 'Show', product %></span> |
-      <span><%= link_to 'Edit', edit_product_path(product) %></span> |
-      <span><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      <span><%= link_to 'Show', product %></span>
+      <% if signed_in? && current_user.admin? %>
+        |<span><%= link_to 'Edit', edit_product_path(product) %></span> |
+        <span><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      <% end %>
     </div>
 </div>

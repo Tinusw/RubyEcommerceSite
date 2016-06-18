@@ -51,5 +51,15 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+.glyphicon-remove {
+  color: rgba(255, 0, 0, 0.7);
+  font-size: 1.5em;
+  &:hover {
+    transition: opacity;
+    transition: 1s ease-in-out;
+    color: rgba(255, 0, 0, 1.0);
+  }
+}
+
 @import 'products.scss';
 @import 'comments.scss';

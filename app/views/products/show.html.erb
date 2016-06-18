@@ -17,17 +17,15 @@
     </h4>
 
     <h4 class="rated" data-score="<%= @product.average_rating %>">
-      
     </h4>
 
     <h4>
       <strong>$<%= @product.price %></strong>
     </h4>
   </div>
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
   <%= render 'comments/new_comment' %>
   <%= render 'comments/comments' %>
   <%= will_paginate @comments %>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
 </div>

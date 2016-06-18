@@ -14,6 +14,11 @@
       <p>
         <%= comment.body %>
       </p>
+      <% if signed_in? && current_user.admin? %>
+        <%= link_to product_comment_path(@product, comment), method: :delete  do %>
+        <h3 class= "glyphicon glyphicon-remove"></h3>
+      <% end %>
+    <% end %>
     </div>
   <% end %>
 </div>
