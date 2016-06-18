@@ -23,6 +23,13 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug', platform: :mri
+
+  # Currently rspec isn't 100% rails 5 ready... hence the mess. See Issue #1527 on rspec-rails git
+  gem 'rspec-core', github: 'rspec/rspec-core', branch: 'master'
+gem 'rspec-support', github: 'rspec/rspec-support', branch: 'master'
+gem 'rspec-expectations', github: 'rspec/rspec-expectations', branch: 'master'
+gem 'rspec-mocks', github: 'rspec/rspec-mocks', branch: 'master'
+gem 'rspec-rails', github: 'rspec/rspec-rails', branch: 'master'
 end
 
 group :development do
