@@ -11,6 +11,7 @@ $(document).ready(function(){
     readOnly: true,
     score: function() {
       return $(this).attr('data-score');
+
     }
     });
 });
