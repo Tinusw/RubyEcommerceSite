@@ -14,6 +14,7 @@ gem 'devise', '~> 4.1', '>= 4.1.1'
 gem 'cancancan', '~> 1.14'
 gem 'jquery-turbolinks'
 gem 'will_paginate', '~> 3.1.0'
+gem 'stripe'
 
 group :production do 
   gem 'rails_12factor'
