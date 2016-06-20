@@ -3,7 +3,8 @@
     <div class="row">
       <hr>
       <p>
-        <%= comment.user.first_name %>
+        <!-- this is dope, it prevents an error of class NIL being raised if a user posted a comment AND then deleted their account -->
+        <%= comment.user.try(:first_name) %>
         <small>
         <%= "#{time_ago_in_words(comment.created_at)} ago" %>
         </small>
