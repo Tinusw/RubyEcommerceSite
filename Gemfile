@@ -15,6 +15,9 @@ gem 'cancancan', '~> 1.14'
 gem 'jquery-turbolinks'
 gem 'will_paginate', '~> 3.1.0'
 
+# Needed for rspec controller tests to access 'assert_template' function
+gem 'rails-controller-testing'
+
 group :production do 
   gem 'rails_12factor'
   gem 'pg'
