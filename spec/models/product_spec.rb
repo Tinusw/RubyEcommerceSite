@@ -10,28 +10,28 @@ describe Product do
   end
 
   it "expects the product to have the name stylo" do 
-    @product.name === "stylo"
+    expect(@product.name).to eq "stylo"
   end
 
   it "expects the product to have the description" do 
-    @product.desc === "Test Product"
+    expect(@product.desc).to eq "Test Product"
   end
 
   it "expect the product to have the price of 1" do
-    @product.price === 1
+    expect(@product.price).to eq(1.0)
   end
 
   it "expects the average of all 3 comments to be 3" do
-    @product.comments.average(:rating) === 3
+    expect(@product.comments.average(:rating)).to eq(3)
   end
 
   # testing Validations
   it "expects the model to validate name" do 
-    expect(Product.new(desc: "no name", price: "1")).not_to be_valid
+    expect(Product.new(desc: "no name", price: 1)).not_to be_valid
   end
 
   it "expects the model to validate description" do 
-    expect(Product.new(name: "no desc", price: "1'")).not_to be_valid
+    expect(Product.new(name: "no desc", price: 1)).not_to be_valid
   end
 
   it "expects the model to validate price" do 
