@@ -23,7 +23,7 @@
       <strong>$<%= '%.2f' % @product.price %></strong>
     </h4>
 
-    <%= form_tag "/payments/create" do %>
+    <%= form_tag "/payments" do %>
       <%= render partial: "shared/stripe_checkout_button" %>
     <% end %>
   </div>

@@ -8,7 +8,7 @@ class PaymentsController < ApplicationController
       charge = Stripe::Charge::create(
         :amount => @product.price * 100,
         :currency => "usd",
-        :source => token
+        :source => token,
         :desc => params[:stripeEmail]
         )
     rescue Stripe::CardError => e 

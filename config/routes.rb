@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   root 'static_pages#index'
 
   resources :orders, only: [:index, :show, :create, :destroy]
+
+  resources :payments, only: [:create]
 end
