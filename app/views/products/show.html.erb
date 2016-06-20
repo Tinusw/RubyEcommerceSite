@@ -20,7 +20,7 @@
     </h4>
 
     <h4>
-      <strong>$<%= @product.price %></strong>
+      <strong>$<%= '%.2f' % @product.price %></strong>
     </h4>
 
     <%= form_tag "/payments/create" do %>
