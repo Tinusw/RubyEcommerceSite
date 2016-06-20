@@ -3,8 +3,8 @@ require 'rails_helper'
 # test validations
 describe Comment do
   before do
-    @product = Product.create!(name: "stylo", desc: "Test Product", price: "1")
-    @user = User.create!(email: "test@test.com", password: "testtest")
+    @product = FactoryGirl.create(:product)
+    @user = FactoryGirl.create(:user)
   end
 
   it "expects a comment to have a body" do 

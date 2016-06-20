@@ -15,9 +15,6 @@ gem 'cancancan', '~> 1.14'
 gem 'jquery-turbolinks'
 gem 'will_paginate', '~> 3.1.0'
 
-# Needed for rspec controller tests to access 'assert_template' function
-gem 'rails-controller-testing'
-
 group :production do 
   gem 'rails_12factor'
   gem 'pg'
@@ -26,13 +23,15 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug', platform: :mri
-
   # Currently rspec isn't 100% rails 5 ready... hence the mess. See Issue #1527 on rspec-rails git
   gem 'rspec-core', github: 'rspec/rspec-core', branch: 'master'
-gem 'rspec-support', github: 'rspec/rspec-support', branch: 'master'
-gem 'rspec-expectations', github: 'rspec/rspec-expectations', branch: 'master'
-gem 'rspec-mocks', github: 'rspec/rspec-mocks', branch: 'master'
-gem 'rspec-rails', github: 'rspec/rspec-rails', branch: 'master'
+  gem 'rspec-support', github: 'rspec/rspec-support', branch: 'master'
+  gem 'rspec-expectations', github: 'rspec/rspec-expectations', branch: 'master'
+  gem 'rspec-mocks', github: 'rspec/rspec-mocks', branch: 'master'
+  gem 'rspec-rails', github: 'rspec/rspec-rails', branch: 'master'
+  # Needed for rspec controller tests to access 'assert_template' function
+  gem 'rails-controller-testing'
+  gem 'factory_girl_rails'
 end
 
 group :development do
