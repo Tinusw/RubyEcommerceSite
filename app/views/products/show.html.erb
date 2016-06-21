@@ -23,8 +23,9 @@
       <strong>$<%= '%.2f' % @product.price %></strong>
     </h4>
 
-    <%= form_tag "/payments" do %>
+    <%= form_tag("/payments/create", remote: true) do %>
       <%= render partial: "shared/stripe_checkout_button" %>
+      <%= hidden_field_tag(:product_id, @product.id) %>
     <% end %>
   </div>
   <%= link_to 'Edit', edit_product_path(@product) %> |
