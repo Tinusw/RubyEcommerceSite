@@ -1,4 +1,5 @@
 class PaymentsController < ApplicationController
+  skip_before_filter :verify_authenticity_token
   def create
     token = params[:stripeToken]
     @product = Product.find(params[:product_id])
@@ -11,6 +12,14 @@ class PaymentsController < ApplicationController
         :source => token,
         :description => params[:stripeEmail]
       )
+
+      if charge.paid
+        Order.create!(          
+          product_id: @product.id, 
+          user_id: @user.id, 
+          total: @product.price)
+      end
+
       flash[:success] = "Payment processed successfully"
     rescue Stripe::CardError => e 
       #Card was declined
