@@ -21,12 +21,20 @@ $background-color: #d3e0f7;
   overflow:hidden;
   .img-hover {
     position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
   }
   .product-info {
     position: absolute;
     margin: 0 auto;
     top: 150px;
     visibility: hidden;
+  }
+  .product-options {
+    position: relative;
+    margin: 0 auto;
+    z-index: 99;
   }
   
   &:hover .product-info {
@@ -47,10 +55,6 @@ $background-color: #d3e0f7;
   }
 }
 
-.img-hover {
-  width: 100%;
-  height: 100%;
-}
 
 // .products {
 //   visibility: hidden;
