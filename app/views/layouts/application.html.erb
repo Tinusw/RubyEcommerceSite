@@ -4,7 +4,7 @@
     <title>The Boot Shop</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -22,11 +22,11 @@
   </head>
 
   <body>
-  <%= render 'layouts/navbar' %>
+    <%= render 'layouts/navbar' %>
 
-  <%= render 'layouts/notifications' %>
-  
-  <%= yield %>
+    <%= render 'layouts/notifications' %>
+    
+    <%= yield %>
   <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
   <script src="assets/javascripts/visuals.js"></script>
   </body>
