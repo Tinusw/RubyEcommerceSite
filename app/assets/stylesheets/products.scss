@@ -7,24 +7,62 @@ $background-color: #d3e0f7;
   width: 100%;
 }
 
+.container-fluid {
+  padding: 0;
+}
+
 // All in _products Partial
+
 .product {
-  margin-top: 40px;
-  border-radius: 15px;
-  background-color: $tertiary-color;
+  padding: 0;
 }
 
-.products {
-  visibility: hidden;
-  padding-top: 0.5%;
-  border-radius: 30px;
-  background-color: $secondary-color;
+#product-wrapper {
+  overflow:hidden;
+  .img-hover {
+    position: relative;
+  }
+  .product-info {
+    position: absolute;
+    margin: 0 auto;
+    top: 150px;
+    visibility: hidden;
+  }
+  
+  &:hover .product-info {
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    visibility:visible;
+  }
+  &:hover .img-hover {
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    opacity: 0.3;
+  }
 }
 
-.container-image {
-  margin: 0 auto;
-  margin-top: 1%;
+.img-hover {
+  width: 100%;
+  height: 100%;
 }
+
+// .products {
+//   visibility: hidden;
+//   padding-top: 0.5%;
+//   border-radius: 30px;
+//   background-color: $secondary-color;
+// }
+
+// .container-image {
+//   margin: 0 auto;
+//   margin-top: 1%;
+// }
 
 .img-responsive {
   border-radius: 30px;
