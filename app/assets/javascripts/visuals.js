@@ -1,7 +1,7 @@
 $(document).ready(function(){
   // scroll Reveal
   window.sr = ScrollReveal();
-  sr.reveal('.products', { duration: 2000 }, 80);
+  sr.reveal('.product', { duration: 2000 }, 80);
   
   // Raty plugin to for inputting review scores.
   $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });

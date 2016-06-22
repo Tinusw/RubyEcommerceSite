@@ -1,14 +1,17 @@
-<div class='col-lg-2 container-image products'>
-  <%= link_to (image_tag(product.image_url)) , product,  class: "img-responsive" %>
-    <div class="container text-center">
-      <h5> <%= product.name %> </h5>
-      <h5><strong>$ <%= '%.2f' % product.price %> </strong></h5>
-    </div>
-    <div class="products_options text-center">
-      <span><%= link_to 'Show', product %></span>
-      <% if signed_in? && current_user.admin? %>
-        |<span><%= link_to 'Edit', edit_product_path(product) %></span> |
-        <span><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-      <% end %>
-    </div>
+<div class="container-fluid col-lg-2 product">
+  <div id="product-wrapper">
+    <%= link_to (image_tag(product.image_url)) , product, class: "img-reponsive img-hover" %>
+      <div class="container text-center product-info">
+        <h3> 
+          <%= product.name %> 
+        </h3>
+        <h5>
+          <strong>$ <%= product.price %> </strong>
+        </h5>
+        <div class="product-options">
+          <span><%= link_to 'Edit', edit_product_path(product) %></span> |
+          <span><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+        </div>
+      </div>
+  </div>
 </div>
