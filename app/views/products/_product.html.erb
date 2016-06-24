@@ -1,6 +1,7 @@
 <div class="container-fluid col-lg-2 product">
   <div id="product-wrapper">
     <%= link_to (image_tag(product.image_url)) , product, class: "img-reponsive img-hover" %>
+      <%= link_to product do %>
       <div class="container text-center product-info">
         <h3> 
           <%= product.name %> 
@@ -8,10 +9,13 @@
         <h5>
           <strong>$ <%= product.price %> </strong>
         </h5>
+      <% end %>
 
         <div class="product-options">
-          <span><%= link_to 'Edit', edit_product_path(product) %></span> |
-          <span><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+        <% if signed_in? && current_user.admin? %>
+          <span><%= link_to 'Edit', edit_product_path(product), id: "edit" %></span> |
+          <span><%= link_to 'Destroy', product, method: :delete, id: "destroy", data: { confirm: 'Are you sure?' } %></span>
+        <% end %>
           </div>
       </div>
       

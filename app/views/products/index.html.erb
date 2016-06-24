@@ -10,6 +10,8 @@
   <div class="container text-center">
     <%= will_paginate @products %>
     <br>
-    <%= link_to 'New Product', new_product_path, class: "btn btn-success" %>
+    <% if signed_in? && current_user.admin? %>
+      <%= link_to 'New Product', new_product_path, class: "btn btn-success" %>
+    <% end %>
   </div>
 </div>

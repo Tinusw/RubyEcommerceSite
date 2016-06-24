@@ -111,6 +111,7 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    elevatezoom-rails (1.0.0)
     erubis (2.7.0)
     execjs (2.7.0)
     factory_girl (4.7.0)
@@ -253,6 +254,7 @@ DEPENDENCIES
   cancancan (~> 1.14)
   coffee-rails (~> 4.1.0)
   devise (~> 4.1, >= 4.1.1)
+  elevatezoom-rails
   factory_girl_rails
   jbuilder (~> 2.0)
   jquery-rails

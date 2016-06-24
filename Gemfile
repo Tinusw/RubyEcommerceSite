@@ -16,6 +16,8 @@ gem 'jquery-turbolinks'
 gem 'will_paginate', '~> 3.1.0'
 gem 'stripe'
 
+gem 'elevatezoom-rails'
+
 group :production do 
   gem 'rails_12factor'
   gem 'pg'

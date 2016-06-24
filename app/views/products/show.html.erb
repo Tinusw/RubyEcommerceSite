@@ -1,7 +1,7 @@
 <div class="col-md-6 center text-center">
   <div class="container">
     <div class="header-spacing">
-      <%= image_tag(@product.image_url, class:" img-responsive center") %>
+      <%= image_tag(@product.image_url, width: "350", class: "img-zoom", data_zoom_image: @product.image_url) %>
     </div>
 
     <h2>

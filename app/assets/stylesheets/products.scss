@@ -30,11 +30,16 @@ $background-color: #d3e0f7;
     margin: 0 auto;
     top: 150px;
     visibility: hidden;
+    z-index: 2;
+      a {
+        color: #333333;
+        text-decoration: none;
+      }
   }
   .product-options {
     position: relative;
     margin: 0 auto;
-    z-index: 99;
+    z-index: 5;
   }
   
   &:hover .product-info {
@@ -51,22 +56,9 @@ $background-color: #d3e0f7;
     -ms-transition: all 500ms ease;
     -o-transition: all 500ms ease;
     transition: all 500ms ease;
-    opacity: 0.3;
+    opacity: 0.4;
   }
 }
-
-
-// .products {
-//   visibility: hidden;
-//   padding-top: 0.5%;
-//   border-radius: 30px;
-//   background-color: $secondary-color;
-// }
-
-// .container-image {
-//   margin: 0 auto;
-//   margin-top: 1%;
-// }
 
 .img-responsive {
   border-radius: 30px;

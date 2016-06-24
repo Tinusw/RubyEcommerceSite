@@ -14,4 +14,16 @@ $(document).ready(function(){
 
     }
     });
+
+  // Adding Elevate Zoom to product/show
+  $('.img-zoom').elevateZoom({
+    zoomWindowFadeIn: 500,
+    zoomWindowFadeOut: 500,
+    lensFadeIn: 500,
+    lensFadeOut: 500, 
+    responsive: true,
+    zoomType: "lens", 
+    cursor: 'crosshair',
+    containLensZoom: true,
+    scrollZoom : true});
 });
