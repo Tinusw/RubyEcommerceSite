@@ -20,9 +20,9 @@ $(document).ready(function(){
     zoomWindowFadeIn: 500,
     zoomWindowFadeOut: 500,
     lensFadeIn: 500,
-    lensFadeOut: 500, 
+    lensFadeOut: 500,
     responsive: true,
-    zoomType: "lens", 
+    zoomType: "lens",
     cursor: 'crosshair',
     containLensZoom: true,
     scrollZoom : true});

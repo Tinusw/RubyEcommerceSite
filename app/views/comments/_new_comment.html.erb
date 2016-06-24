@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
 <div class='container new-comments'>
-  <%= form_for([@product, @product.comments.build]) do |f| %>
+  <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
   <div class="container text-center">
       <h4> Add a review: </h4>
   </div>
