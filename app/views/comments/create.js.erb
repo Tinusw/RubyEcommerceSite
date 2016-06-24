@@ -4,4 +4,16 @@ $(".new-comments").fadeOut( 1800 );
 // should write some script to make div slide up smoothly.
 
 // Show new comment
-$("comments").prepend("<%= j render @comment %>");
+$("#product_comments").prepend("<%= j render @comment %>");
+
+// Raty plugin to for inputting review scores.
+  $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
+
+  // raty plugin config for outputting comment scores.
+  $('.rated').raty( { path: '/assets',
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+
+    }
+    });
