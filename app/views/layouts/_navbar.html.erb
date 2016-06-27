@@ -1,39 +1,50 @@
-<ul class="nav navbar-form nav-pills pull-left">
-  <li class="<%= active_if_current(root_path)%>" >
-    <%= link_to "Home", root_path %>
-  </li>
-  <li class="<%= active_if_current(products_path)%>">
-    <%= link_to "Products", products_path %>
-  </li>
-  <li class="input-group">
-  <%= form_tag("/products", method: "get") do %>
-    <%= text_field_tag(:q, nil, placeholder: "Find a product:", class: "form-control input-lg") %>
-    <div class="span input-group-btn">
-      <%= submit_tag("Search", class: "btn btn-success btn-lg") %>
-    </div>
-  <% end %>
-  <% if user_signed_in? %>
-  <li class="pull-right">
-    <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
-  </li>
-  <li class="pull-right <%= active_if_current(edit_user_registration_path)%>">
-    <%= link_to "Account", edit_user_registration_path %>
-  </li>
-  
-  <% else %>
-  <li class="pull-right">
-    <%= link_to('Login', new_user_session_path) %>
-  </li>
-  <% end %>
-  <% if user_signed_in? && current_user.admin? %>
-  <li class="pull-right <%= active_if_current(edit_user_registration_path)%>">
-    <%= link_to "Orders", orders_path %>
-  </li>
-  <% end %>
-  <li class="pull-right <%= active_if_current(static_pages_about_path)%>">
-    <%= link_to "About", static_pages_about_path %>
-  </li>
-  <li class="pull-right <%= active_if_current(static_pages_contact_path)%>">
-    <%= link_to "Contact", static_pages_contact_path %>
-  </li>
-</ul>
+<nav class="navBar">
+  <nav class="wrapper">
+    <div class="logo"></div><!-- Logo -->
+    <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="label-toggle"></label>
+    </input>
+    <ul>
+      <li class="<%= active_if_current(root_path)%>" >
+      <%= link_to "Home", root_path %>
+      </li>
+      <li class="<%= active_if_current(products_path)%>">
+      <%= link_to "Products", products_path %>
+      </li>
+      <li class="input">
+        <%= form_tag("/products", method: "get") do %>
+          <%= text_field_tag(:q, nil, placeholder: "Find a product", class: "form-control input-lg text-center") %>
+          <div class="span input-group-btn">
+            <%= submit_tag("Search", class: "btn btn-success black btn-lg") %>
+          </div>
+        <% end %>
+      </li>
+       <% if user_signed_in? %>
+      <li class="<%= active_if_current(edit_user_registration_path)%>">
+        <%= link_to "Account", edit_user_registration_path %>
+      </li>
+      <li class="<%= active_if_current(products_path)%>">
+        <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+      </li>
+      <% else %>
+      <li class="">
+        <%= link_to('Login', new_user_session_path) %>
+      </li>
+      <% end %>
+
+      <% if user_signed_in? && current_user.admin? %>
+      <li class="<%= active_if_current(edit_user_registration_path)%>">
+        <%= link_to "Orders", orders_path %>
+      </li>
+      <% end %>
+
+      <li class="<%= active_if_current(static_pages_about_path)%>">
+        <%= link_to "About", static_pages_about_path %>
+      </li>
+      <li class="<%= active_if_current(static_pages_contact_path)%>">
+        <%= link_to "Contact", static_pages_contact_path %>
+      </li> 
+     
+    </ul>
+  </nav>
+</nav>
