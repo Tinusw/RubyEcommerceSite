@@ -19,6 +19,9 @@
   <li class="pull-right <%= active_if_current(edit_user_registration_path)%>">
     <%= link_to "Account", edit_user_registration_path %>
   </li>
+  <li class="pull-right <%= active_if_current(edit_user_registration_path)%>">
+    <%= link_to "Orders", orders_path %>
+  </li>
   <% else %>
   <li class="pull-right">
     <%= link_to('Login', new_user_session_path) %>
