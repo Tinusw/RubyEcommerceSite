@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  respond_to :json, :html
 
   # GET /products
   # GET /products.json
@@ -16,6 +17,7 @@ class ProductsController < ApplicationController
       @products = Product.all.paginate(:page => params[:page], :per_page => 12)
 
     end
+    respond_with @products
   end
 
   # GET /products/1

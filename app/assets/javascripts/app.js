@@ -4,20 +4,27 @@ $(document).on('ready page:load', function() {
   angular.bootstrap(document.body, ['shop'])
 });
 
-// OrdersController Code
-app.controller('OrdersCtrl', ['$scope', function($scope){
-  $scope.orders = [
-  {id:1, total: 24, product_id: 1, user_id: 1},
-  {id:2, total: 7, product_id: 1},
-  {id:3, total: 42, product_id: 1, user_id: 1}
-  ];
+// Model
+app.factory('models', function(){
+  var x = {
+    order: []
+  };
+  return x;
+});
 
+// OrdersController Code
+app.controller('OrdersCtrl', ['$scope', 'models', function($scope, models){
+  // set orders = models.orders
+  $scope.orders = models.orders;
+  
+  // add an order
   $scope.addOrder = function(){
     // if empty do not add to $scope.orders
     if(!$scope.newOrder.product_id || $scope.newOrder.total === '') {return}
     $scope.orders.push($scope.newOrder);
   }
 
+  // delete an order
   $scope.deleteOrder = function(order){
     $scope.orders.splice($scope.orders.indexOf(order), 1);
   }
