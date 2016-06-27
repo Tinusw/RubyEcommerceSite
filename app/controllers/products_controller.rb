@@ -10,12 +10,11 @@ class ProductsController < ApplicationController
       @products = Product.where("name LIKE ?", "%#{search_term}").paginate(:page => params[:page], :per_page => 12)
       # if no matches are returned, return all.
       if @products.empty?
-        @products = Product.all.paginate(:page => params[:page], :per_page => 12)
+        @products = Product.paginate(:page => params[:page], :per_page => 12)
       end
       # return filtered search list
     else
-      @products = Product.all.paginate(:page => params[:page], :per_page => 12)
-
+      @products = Product.paginate(:page => params[:page], :per_page => 12)
     end
     respond_with @products
   end
