@@ -15,6 +15,7 @@ gem 'cancancan', '~> 1.14'
 gem 'jquery-turbolinks'
 gem 'will_paginate', '~> 3.1.0'
 gem 'stripe'
+gem 'angularjs-rails'
 
 gem 'elevatezoom-rails'
 

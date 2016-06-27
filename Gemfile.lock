@@ -85,6 +85,7 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    angularjs-rails (1.5.5)
     arel (7.0.0)
     autoprefixer-rails (6.3.6.2)
       execjs
@@ -249,6 +250,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  angularjs-rails
   bootstrap-sass (~> 3.3, >= 3.3.6)
   byebug
   cancancan (~> 1.14)

@@ -1,1 +1,46 @@
 <p>Orders#index page</p>
+
+<div class="container-fluid">
+  <div class="header-spacing">
+
+  <div ng-controller="OrdersCtrl">  
+    <h1>Orders</h1>
+    <form class="form-inline" ng-submit="addOrder()">
+      <strong>Add Order: </strong>
+
+      <input type="number" value="{{orders[orders.length -1].id + 1}}" ng-model="newOrder.id" disabled>
+      <input type="number" step="0.01" class="form-control" placeholder="Total" ng-model="newOrder.total">
+      <input type="number" class="form-control" ng-model="newOrder.product_id">
+
+      <input type="submit" value="+" class="btn btn-primary">
+    </form>
+
+    <table class="table table-hover">
+      <thead>
+        <td> Order ID</td>
+        <td> Total </td>
+        <td> Product </td>
+        <td></td>
+      </thead>
+      <tr ng-repeat = "order in orders | orderBy:'-id':reverse">
+      <td>
+        {{order.id}}
+      </td>
+      <td>
+        {{order.total | currency}}
+      </td>
+      <td>
+        {{order.product_id}}
+        <small ng-show="order.user_id"><br>user id:{{order.user_id}}</small>
+      </td>
+      <td>
+        <button ng-click="deleteOrder(order)" class="btn btn-danger">
+          <span class="glyphicon glyphicon-trash"></span>
+        </button>
+      </td>
+      
+      </tr>
+    </table>  
+  </div>
+</div>
+
