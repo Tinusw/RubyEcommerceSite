@@ -19,12 +19,15 @@
   <li class="pull-right <%= active_if_current(edit_user_registration_path)%>">
     <%= link_to "Account", edit_user_registration_path %>
   </li>
-  <li class="pull-right <%= active_if_current(edit_user_registration_path)%>">
-    <%= link_to "Orders", orders_path %>
-  </li>
+  
   <% else %>
   <li class="pull-right">
     <%= link_to('Login', new_user_session_path) %>
+  </li>
+  <% end %>
+  <% if user_signed_in? && current_user.admin? %>
+  <li class="pull-right <%= active_if_current(edit_user_registration_path)%>">
+    <%= link_to "Orders", orders_path %>
   </li>
   <% end %>
   <li class="pull-right <%= active_if_current(static_pages_about_path)%>">
