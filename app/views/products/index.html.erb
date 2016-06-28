@@ -3,8 +3,10 @@
     <p id="notice">
       <%= notice %>
     </p>
-    <% @products.each do |product| %>
-      <%= render product %>
+    <% cache(cache_key_for_products) do %>
+      <% @products.each do |product| %>
+        <%= render product %>
+      <% end %>
     <% end %>
   </div>
   <div class="container text-center">
