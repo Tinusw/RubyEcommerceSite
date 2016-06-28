@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
-      @products = Product.where("UPPER(name) LIKE ?", "%#{search_term.upcase}%").paginate(:page => params[:page], :per_page => 12)
+      @products = Product.where("UPPER(name) ILIKE ?", "%#{search_term.upcase}%").paginate(:page => params[:page], :per_page => 12)
       # if no matches are returned, return all.
       if @products.empty?
         @products = Product.paginate(:page => params[:page], :per_page => 12)
