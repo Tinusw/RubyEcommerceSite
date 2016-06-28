@@ -1,6 +1,5 @@
 <nav class="navBar">
   <nav class="wrapper">
-    <div class="logo"></div><!-- Logo -->
     <input type="checkbox" id="menu-toggle">
       <label for="menu-toggle" class="label-toggle"></label>
     </input>
@@ -21,7 +20,7 @@
       <li class="<%= active_if_current(edit_user_registration_path)%>">
         <%= link_to "Account", edit_user_registration_path %>
       </li>
-      <li class="<%= active_if_current(products_path)%>">
+      <li>
         <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
       </li>
       <% else %>
@@ -31,7 +30,7 @@
       <% end %>
 
       <% if user_signed_in? && current_user.admin? %>
-      <li class="<%= active_if_current(edit_user_registration_path)%>">
+      <li class="<%= active_if_current(orders_path)%>">
         <%= link_to "Orders", orders_path %>
       </li>
       <% end %>
