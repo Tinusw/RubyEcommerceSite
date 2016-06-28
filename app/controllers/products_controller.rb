@@ -7,10 +7,9 @@ class ProductsController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
-      @products = Product.where("name iLike ?", "%#{search_term}%").paginate(:page => params[:page], :per_page => 12)
-      # return filtered search list
+      @products = Product.where("name LIKE ?", "%#{search_term}%").paginate(:page => params[:page], :per_page => 12)
     else
-      @products = Product.paginate(:page => params[:page], :per_page => 12)
+      @products = Product.all.paginate(:page => params[:page], :per_page => 12)
     end
     respond_with @products
   end
