@@ -10,6 +10,10 @@ $background-color: #d3e0f7;
   padding: 0;
 }
 
+.img-responsive {
+  border-radius: 30px;
+}
+
 // All in _products Partial
 
 .product {
@@ -59,6 +63,39 @@ $background-color: #d3e0f7;
   }
 }
 
-.img-responsive {
-  border-radius: 30px;
+@media screen and (max-width: 768px) {
+  #product-wrapper > a > img {
+    max-width: 120%;
+  }
+  .product-info {
+    visibility:visible !important;
+    h1, h2, h3, h4, p, a, strong {
+      font-weight: 200;
+      color: white;
+    }
+  .product-options {
+    color: white;
+    a {
+      color: red !important;
+    }
+  }
+  }
 }
+
+// Products Show page
+
+@media screen and (max-width: 768px) {
+  .img {
+    max-width: 80%;
+  }
+  .img-zoom {
+  max-width: 80%;
+  }
+  .new-comments {
+    margin-top: 30px;
+  }
+
+
+}
+
+

@@ -47,6 +47,21 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.btn-success {
+  background-color: black;
+  border-color: $primary-color;
+  &:active {
+    background-color: $secondary-color !important;
+    border-color: $primary-color !important;
+  }
+  &:focus {
+    background-color: $secondary-color !important;
+    border-color: $primary-color !important;
+  }
+}
+
+@import 'static_pages.scss';
 @import 'navbar.scss';
 @import 'products.scss';
 @import 'comments.scss';
+@import 'orders.scss';

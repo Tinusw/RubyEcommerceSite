@@ -14,9 +14,7 @@
       <li class="input">
         <%= form_tag("/products", method: "get") do %>
           <%= text_field_tag(:q, nil, placeholder: "Find a product", class: "form-control input-lg text-center") %>
-          <div class="span input-group-btn">
-            <%= submit_tag("Search", class: "btn btn-success black btn-lg") %>
-          </div>
+          <!--  -->
         <% end %>
       </li>
        <% if user_signed_in? %>
