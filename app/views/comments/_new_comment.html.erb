@@ -17,4 +17,13 @@
   </div>
   <% end %>
 </div>
+
+<% else %>
+<div class='container new-comments'>
+  <div class="container text-center">
+      <h4> Please <%= link_to "login", new_user_session_path %> if you'd like to leave a review </h4>
+  </div>
+  
+</div>
+
 <% end %>

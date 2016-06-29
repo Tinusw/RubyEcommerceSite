@@ -39,12 +39,5 @@ describe UsersController, :type => :controller do
         expect(response).to render_template("edit")
       end
     end
-
-    context "No user is logged in" do 
-      it "redirects to login instead of edit page" do 
-        get :edit, params: {id: @user.id }
-        expect(response).to redirect_to(new_user_session_path)
-      end
-    end
   end
 end
