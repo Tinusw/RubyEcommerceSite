@@ -1,6 +1,5 @@
 <div class="col-md-6 center text-center">
   <div class="container">
-    <% cache @product do %>
       <div class="header-spacing">
         <%= image_tag(@product.image_url, width: "350", class: "img-zoom", data_zoom_image: @product.image_url) %>
       </div>
@@ -16,9 +15,6 @@
       <h4>
         <%= @product.style %>
       </h4>
-
-    <% end %>
-
     <h4 class="rated" data-score="<%= @product.average_rating %>">
     </h4>
 

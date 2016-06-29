@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = if params[:q]
-      Product.where('name ilike?', "%#{params[:q]}%")
+      Product.where('name ilike?', "%#{params[:q]}%").paginate(:page => params[:page], :per_page => 12)
     else
       @products = Product.all.paginate(:page => params[:page], :per_page => 12)
     end
