@@ -1,5 +1,10 @@
 <div class="container-fluid">
-  <div class="header-spacing">
+  <div class="search-bar">
+    <%= form_tag("/products", method: "get") do %>
+      <%= text_field_tag(:q, nil, placeholder: "Find a product", class: "form-control input-lg text-center") %>
+    <% end %>
+  </div>
+  <div class="">
     <p id="notice">
       <%= notice %>
     </p>
@@ -7,7 +12,7 @@
       <%= render product %>
     <% end %>
   </div>
-  <div class="container text-center">
+  <div class="container text-center footer">
     <%= will_paginate @products %>
     <br>
     <% if signed_in? && current_user.admin? %>

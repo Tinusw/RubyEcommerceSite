@@ -52,12 +52,13 @@ ul {
   }
   
   .label-toggle {
+    top: 4px;
+    position: fixed;
     background: linear-gradient(to bottom, $primary-color 0%, $primary-color 20%, transparent 20%, transparent 40%, $primary-color 40%, $primary-color 60%, transparent 60%, transparent 80%, $primary-color 80%, $primary-color 100%); //Gradient Hamburger
     cursor: pointer;
     display: block;
     float: left;
     height: 35px;
-    margin-top: 5px;
     margin-left: 10px;
     width: 40px;
   }
@@ -93,7 +94,6 @@ ul {
     display: block;
     float: right;
     height: 35px;
-    margin-top: 1em;
     width: 35px;
   }
   
